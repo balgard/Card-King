@@ -22,6 +22,7 @@
 		3F5ACD131E9D3DE1005E9536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5ACD161E9D3DE1005E9536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F5ACD181E9D3DE1005E9536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5ACD211E9D4061005E9536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = "Card Koenig/Base.lproj/Card.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		3F5ACD001E9D3DE1005E9536 = {
 			isa = PBXGroup;
 			children = (
+				3F5ACD201E9D4061005E9536 /* Card.swift */,
 				3F5ACD0B1E9D3DE1005E9536 /* Card Koenig */,
 				3F5ACD0A1E9D3DE1005E9536 /* Products */,
 			);
@@ -159,6 +161,14 @@
 				3F5ACD161E9D3DE1005E9536 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3F5ACD201E9D4061005E9536 /* Card.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5ACD211E9D4061005E9536 /* Base */,
+			);
+			name = Card.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
