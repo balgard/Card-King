@@ -17,7 +17,7 @@ class Card: UILabel
     var image : String
     
     
-    func Card(value: Int, suite: String, rank: String, color: string, image: string)
+    init(value: Int, suite: String, rank: String, color: String, image: String)
     {
         self.value = value
         self.suite = suite
