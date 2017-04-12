@@ -6,9 +6,7 @@
 //  Copyright © 2017 Balgard. All rights reserved.
 //
 
-import UIKit
-
-class Card: UILabel
+class Card
 {
     var value : Int
     var suite: String
