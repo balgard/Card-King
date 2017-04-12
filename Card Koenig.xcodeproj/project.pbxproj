@@ -13,6 +13,7 @@
 		3F5ACD141E9D3DE1005E9536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5ACD131E9D3DE1005E9536 /* Assets.xcassets */; };
 		3F5ACD171E9D3DE1005E9536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5ACD151E9D3DE1005E9536 /* LaunchScreen.storyboard */; };
 		3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67831E9D4B7E00E4080C /* Card.swift */; };
+		3FDD67861E9E8A0D00E4080C /* PresidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67851E9E8A0D00E4080C /* PresidentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3F5ACD161E9D3DE1005E9536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F5ACD181E9D3DE1005E9536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDD67831E9D4B7E00E4080C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3FDD67851E9E8A0D00E4080C /* PresidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				3F5ACD0C1E9D3DE1005E9536 /* AppDelegate.swift */,
 				3FDD67831E9D4B7E00E4080C /* Card.swift */,
+				3FDD67851E9E8A0D00E4080C /* PresidentViewController.swift */,
 				3F5ACD0E1E9D3DE1005E9536 /* ViewController.swift */,
 				3F5ACD101E9D3DE1005E9536 /* Main.storyboard */,
 				3F5ACD131E9D3DE1005E9536 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5ACD0F1E9D3DE1005E9536 /* ViewController.swift in Sources */,
+				3FDD67861E9E8A0D00E4080C /* PresidentViewController.swift in Sources */,
 				3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */,
 				3F5ACD0D1E9D3DE1005E9536 /* AppDelegate.swift in Sources */,
 			);
