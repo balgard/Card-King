@@ -10,12 +10,17 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad()
     {
         
     }
-
+    
+    @IBAction func backToMenu(segue: UIStoryboardSegue)
+    {
+        
+    }
 
 }
 
