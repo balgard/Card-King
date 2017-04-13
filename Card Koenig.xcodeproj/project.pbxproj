@@ -16,6 +16,7 @@
 		3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67831E9D4B7E00E4080C /* Card.swift */; };
 		3FDD67861E9E8A0D00E4080C /* PresidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67851E9E8A0D00E4080C /* PresidentViewController.swift */; };
 		3FDD67881E9FD24100E4080C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67871E9FD24000E4080C /* GameController.swift */; };
+		615715AE1E9FDD47002DAEBE /* Uno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615715AD1E9FDD47002DAEBE /* Uno.swift */; };
 		61A54B3D1E9FDB720018C444 /* UnoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A54B3C1E9FDB720018C444 /* UnoCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		3FDD67831E9D4B7E00E4080C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3FDD67851E9E8A0D00E4080C /* PresidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentViewController.swift; sourceTree = "<group>"; };
 		3FDD67871E9FD24000E4080C /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		615715AD1E9FDD47002DAEBE /* Uno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uno.swift; sourceTree = "<group>"; };
 		61A54B3C1E9FDB720018C444 /* UnoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnoCard.swift; path = ../UnoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				61A54B3C1E9FDB720018C444 /* UnoCard.swift */,
+				615715AD1E9FDD47002DAEBE /* Uno.swift */,
 				3F5ACD0C1E9D3DE1005E9536 /* AppDelegate.swift */,
 				3FDD67831E9D4B7E00E4080C /* Card.swift */,
 				3F6E5FB01E9FDB5A00CD4DE5 /* War.swift */,
@@ -158,6 +161,7 @@
 				61A54B3D1E9FDB720018C444 /* UnoCard.swift in Sources */,
 				3FDD67861E9E8A0D00E4080C /* PresidentViewController.swift in Sources */,
 				3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */,
+				615715AE1E9FDD47002DAEBE /* Uno.swift in Sources */,
 				3F5ACD0D1E9D3DE1005E9536 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
