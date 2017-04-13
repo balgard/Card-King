@@ -9,13 +9,12 @@
 import UIKit
 
 class War: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var cards = 52
+    var player1 = 26
+    var player2 = 26
+    
+    func viewDidLoad()
+    {
+        
     }
-    */
-
 }
