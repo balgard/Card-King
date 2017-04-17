@@ -15,6 +15,6 @@ class War: UIView {
     
     func viewDidLoad()
     {
-        
+        var player1Hand = UIImage(cgImage: #imageLiteral(resourceName: "Card-Back-1") as! CGImage)
     }
 }
