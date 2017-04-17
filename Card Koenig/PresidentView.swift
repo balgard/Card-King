@@ -8,10 +8,15 @@
 
 import UIKit
 
-class PresidentViewController: UIView
+class PresidentView: UIView
 {
 
     func viewDidLoad()
+    {
+        
+    }
+    
+    func shuffle(playerNumber: Int, handSize: Int)
     {
         
     }

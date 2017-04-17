@@ -8,7 +8,8 @@
 
 import UIKit
 
-class War: UIView {
+class WarView: UIView
+{
 
     /*
     // Only override draw() if you perform custom drawing.
