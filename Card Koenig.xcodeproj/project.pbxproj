@@ -17,6 +17,7 @@
 		3FDD67861E9E8A0D00E4080C /* PresidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67851E9E8A0D00E4080C /* PresidentView.swift */; };
 		3FDD67881E9FD24100E4080C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67871E9FD24000E4080C /* GameController.swift */; };
 		61A54B3D1E9FDB720018C444 /* UnoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A54B3C1E9FDB720018C444 /* UnoCard.swift */; };
+		61BC720F1EA6716200E42687 /* GoFishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC720E1EA6716200E42687 /* GoFishView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 				61A54B3C1E9FDB720018C444 /* UnoCard.swift */,
 				3FDD67831E9D4B7E00E4080C /* Card.swift */,
 				3F6E5FB01E9FDB5A00CD4DE5 /* WarView.swift */,
+				61BC720E1EA6716200E42687 /* GoFishView.swift */,
 				3FDD67851E9E8A0D00E4080C /* PresidentView.swift */,
 				3F5ACD0E1E9D3DE1005E9536 /* ViewController.swift */,
 				3FDD67871E9FD24000E4080C /* GameController.swift */,
@@ -158,6 +160,7 @@
 				61A54B3D1E9FDB720018C444 /* UnoCard.swift in Sources */,
 				3FDD67861E9E8A0D00E4080C /* PresidentView.swift in Sources */,
 				3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */,
+				61BC720F1EA6716200E42687 /* GoFishView.swift in Sources */,
 				3F5ACD0D1E9D3DE1005E9536 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
