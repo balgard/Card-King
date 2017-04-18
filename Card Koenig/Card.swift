@@ -23,4 +23,28 @@ class Card
         self.color = color
         self.image = image
     }
+    
+    func assignRank(value: Int)
+    {
+        if value == 1
+        {
+            rank = "Ace"
+        }
+        else if value < 11 && value > 1
+        {
+            rank = String(value)
+        }
+        else if value == 11
+        {
+            rank = "Jack"
+        }
+        else if value == 12
+        {
+            rank = "Queen"
+        }
+        else
+        {
+            rank = "King"
+        }
+    }
 }
