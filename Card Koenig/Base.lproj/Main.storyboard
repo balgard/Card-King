@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,8 @@
                                 <rect key="frame" x="164" y="318" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="lEs-Nw-akQ" kind="show" id="hgC-A0-aa8"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEu-6n-xpA"/>
+                                    <segue destination="lEs-Nw-akQ" kind="show" identifier="segueToGame" id="hgC-A0-aa8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1D-lT-2dM">
@@ -34,7 +35,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="War"/>
                                 <connections>
-                                    <segue destination="lEs-Nw-akQ" kind="show" id="uSc-Sa-9TB"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ug-Nw-Skq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,11 +63,11 @@
                         <viewControllerLayoutGuide type="top" id="iPf-i3-ru3"/>
                         <viewControllerLayoutGuide type="bottom" id="CsG-PL-chf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OMa-0t-oda">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="OMa-0t-oda">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-hj-2hG" userLabel="GameView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-hj-2hG" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="67" width="375" height="600"/>
                                 <color key="backgroundColor" red="1" green="0.049330440420000003" blue="0.076213708310000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="GameView"/>
@@ -74,8 +75,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ4-Cg-2xf">
                                 <rect key="frame" x="0.0" y="16" width="77" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="77" id="INl-s5-REb"/>
-                                    <constraint firstAttribute="height" constant="43" id="hnU-n0-6GN"/>
+                                    <constraint firstAttribute="width" constant="77" id="VIK-Rl-FOf"/>
+                                    <constraint firstAttribute="height" constant="43" id="zKX-V3-mfU"/>
                                 </constraints>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -85,12 +86,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7n3-hj-2hG" firstAttribute="bottom" secondItem="CsG-PL-chf" secondAttribute="top" id="6hC-Pv-9yp"/>
-                            <constraint firstItem="NJ4-Cg-2xf" firstAttribute="leading" secondItem="7n3-hj-2hG" secondAttribute="leading" id="Hsp-A0-MnX"/>
-                            <constraint firstItem="7n3-hj-2hG" firstAttribute="top" secondItem="NJ4-Cg-2xf" secondAttribute="bottom" constant="8" symbolic="YES" id="d0W-Qs-5Jl"/>
-                            <constraint firstItem="NJ4-Cg-2xf" firstAttribute="top" secondItem="OMa-0t-oda" secondAttribute="topMargin" constant="16" id="f4z-v6-NcV"/>
-                            <constraint firstItem="NJ4-Cg-2xf" firstAttribute="leading" secondItem="OMa-0t-oda" secondAttribute="leading" id="vWc-Up-yOW"/>
-                            <constraint firstAttribute="trailing" secondItem="7n3-hj-2hG" secondAttribute="trailing" id="znO-hv-28H"/>
+                            <constraint firstItem="NJ4-Cg-2xf" firstAttribute="top" secondItem="OMa-0t-oda" secondAttribute="topMargin" constant="16" id="EcD-zO-oAi"/>
+                            <constraint firstItem="NJ4-Cg-2xf" firstAttribute="leading" secondItem="7n3-hj-2hG" secondAttribute="leading" id="Pos-fX-zOm"/>
+                            <constraint firstItem="7n3-hj-2hG" firstAttribute="bottom" secondItem="CsG-PL-chf" secondAttribute="top" id="Rla-oI-U5C"/>
+                            <constraint firstItem="7n3-hj-2hG" firstAttribute="top" secondItem="NJ4-Cg-2xf" secondAttribute="bottom" constant="8" symbolic="YES" id="bNr-nl-Zmi"/>
+                            <constraint firstAttribute="trailing" secondItem="7n3-hj-2hG" secondAttribute="trailing" id="r3b-q4-ycU"/>
+                            <constraint firstItem="NJ4-Cg-2xf" firstAttribute="leading" secondItem="OMa-0t-oda" secondAttribute="leading" id="tyv-Im-1nE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -104,7 +105,4 @@
             <point key="canvasLocation" x="1008.8" y="51.724137931034484"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hgC-A0-aa8"/>
-    </inferredMetricsTieBreakers>
 </document>

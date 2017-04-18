@@ -22,5 +22,9 @@ class ViewController: UIViewController
         
     }
 
+    @IBAction func buttonPressed(_ sender: UIButton)
+    {
+        self.performSegue(withIdentifier: "segueToGame", sender: sender)
+    }
 }
 
