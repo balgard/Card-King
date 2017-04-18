@@ -12,9 +12,11 @@ class War: UIView {
     var cards = 52
     var player1 = 26
     var player2 = 26
+    //let player1Hand = "#imageLiteral(resourceName: "Card-Back-1")"
     
     func viewDidLoad()
     {
-        var player1Hand = UIImage(cgImage: #imageLiteral(resourceName: "Card-Back-1") as! CGImage)
+        
+        //var player1Hand = UIImage(cgImage: #imageLiteral(resourceName: "Card-Back-1") as! CGImage)
     }
 }
