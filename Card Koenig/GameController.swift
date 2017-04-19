@@ -69,7 +69,11 @@ class GameController: UIViewController
                 {
                     imageName = "\(letter)\(x)"
                 }
-                var c = Card(value: x, suite: suite, rank: "", color: color, image: imageName)
+                var c = Card()
+                c.value = x
+                c.suite = suite
+                c.color = color
+                c.imageName = imageName
                 c.assignRank(value: c.value)
                 temp.append(c)
             }
