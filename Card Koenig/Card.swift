@@ -41,4 +41,9 @@ class Card: UIImageView
             rank = "King"
         }
     }
+    
+    func setImage(name: String)
+    {
+        self.image = UIImage(named: name)
+    }
 }

@@ -12,10 +12,11 @@ class ViewController: UIViewController
 {
     @IBOutlet weak var button: UIButton!
     var war = War()
+    @IBOutlet weak var card: Card!
     
     override func viewDidLoad()
     {
-        
+        card.setImage(name: "s01")
     }
     
     @IBAction func backToMenu(segue: UIStoryboardSegue)

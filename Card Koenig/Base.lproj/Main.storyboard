@@ -38,6 +38,10 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ug-Nw-Skq"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-Nl-Zd2" customClass="Card" customModule="Card_Koenig" customModuleProvider="target">
+                                <rect key="frame" x="125" y="420" width="125" height="205"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -47,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="fRD-j1-UCT" id="Lph-UO-05h"/>
+                        <outlet property="card" destination="jOh-Nl-Zd2" id="dwR-t1-1tZ"/>
                         <segue destination="O83-U9-t4P" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="JCe-UZ-ptt"/>
                     </connections>
                 </viewController>
