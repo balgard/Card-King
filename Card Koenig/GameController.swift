@@ -21,7 +21,14 @@ class GameController: UIViewController
     
     func shuffle(deck: [AnyObject])
     {
-        
+        var tempDeck = [Card]()
+        while standardDeck.count > 0
+        {
+            var random = Int(arc4random_uniform(53))
+            var card = standardDeck.remove(at: random)
+            tempDeck.append(card)
+        }
+        standardDeck = tempDeck
     }
     
     func fillDeck(deck: [AnyObject])
@@ -76,8 +83,10 @@ class GameController: UIViewController
                 c.imageName = imageName
                 c.assignRank(value: c.value)
                 temp.append(c)
+                x += 1
             }
             x = 0
+            i += 1
         }
         standardDeck = temp as! [Card]
     }
@@ -89,6 +98,9 @@ class GameController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        fillDeck(deck: standardDeck)
+        shuffle(deck: standardDeck)
+        print(standardDeck)
         
     }
     
