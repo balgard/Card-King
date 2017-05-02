@@ -24,7 +24,7 @@ class GameController: UIViewController
         var tempDeck = [Card]()
         while standardDeck.count > 0
         {
-            var random = Int(arc4random_uniform(53))
+            var random = Int(arc4random_uniform(UInt32(standardDeck.count)))
             var card = standardDeck.remove(at: random)
             tempDeck.append(card)
         }
