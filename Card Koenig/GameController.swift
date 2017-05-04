@@ -12,7 +12,8 @@ class GameController: UIViewController
 {
     var standardDeck = [Card]()
     var otherDeck = [AnyObject]()
-    var warMode = War()
+    
+    @IBOutlet weak var gameView: UIView!
     
     func deal(player: Int, handSize: Int, deckSize: Int)
     {
@@ -100,7 +101,6 @@ class GameController: UIViewController
         super.viewDidLoad()
         fillDeck(deck: standardDeck)
         shuffle(deck: standardDeck)
-        print(standardDeck)
         
     }
     

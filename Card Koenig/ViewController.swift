@@ -26,13 +26,12 @@ class ViewController: UIViewController
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let dvc = segue.destination as! GameController
-        dvc.warMode = war
+        dvc.gameView = war
     }
     
     @IBAction func buttonPressed(_ sender: UIButton)
     {
         self.performSegue(withIdentifier: "segueToGame", sender: sender)
-        print("[Succ]ess")
     }
 }
 
