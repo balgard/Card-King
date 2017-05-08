@@ -10,13 +10,16 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    @IBOutlet weak var button: UIButton!
-    var war = War()
+    @IBOutlet weak var presidentButton : UIButton!
     @IBOutlet weak var card: Card!
+    @IBOutlet weak var warButton: UIButton!
+    var buttons = [UIButton]()
     
     override func viewDidLoad()
     {
         card.setImage(name: "s01")
+        buttons.append(presidentButton)
+        buttons.append(warButton)
     }
     
     @IBAction func backToMenu(segue: UIStoryboardSegue)
@@ -26,7 +29,21 @@ class ViewController: UIViewController
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let dvc = segue.destination as! GameController
-        dvc.gameView = war
+        for x in buttons
+        {
+            if x == sender as! UIButton
+            {
+                if x == warButton
+                {
+                    dvc.gameView = War()
+                    print(dvc.gameView)
+                }
+            }
+            /*if String(describing: x.currentAttributedTitle) == "War"
+            {
+                dvc.gameView = War()
+            }*/
+        }
     }
     
     @IBAction func buttonPressed(_ sender: UIButton)

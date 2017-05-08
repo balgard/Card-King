@@ -22,9 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRD-j1-UCT">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRD-j1-UCT" userLabel="President Button">
+                                <rect key="frame" x="154" y="318" width="66" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="President Button" label="President Button"/>
+                                <state key="normal" title="President"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEu-6n-xpA"/>
                                     <segue destination="lEs-Nw-akQ" kind="show" identifier="segueToGame" id="hgC-A0-aa8"/>
@@ -35,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="War"/>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ug-Nw-Skq"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jzE-Bl-D9v"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-Nl-Zd2" customClass="Card" customModule="Card_Koenig" customModuleProvider="target">
@@ -50,8 +51,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="fRD-j1-UCT" id="Lph-UO-05h"/>
-                        <outlet property="card" destination="jOh-Nl-Zd2" id="dwR-t1-1tZ"/>
+                        <outlet property="card" destination="jOh-Nl-Zd2" id="Xzz-7F-oQc"/>
+                        <outlet property="presidentButton" destination="fRD-j1-UCT" id="WlK-cn-eGL"/>
+                        <outlet property="warButton" destination="J1D-lT-2dM" id="XmH-Ms-1AN"/>
                         <segue destination="O83-U9-t4P" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="JCe-UZ-ptt"/>
                     </connections>
                 </viewController>
@@ -72,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-hj-2hG" userLabel="GameView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-hj-2hG" userLabel="gameView">
                                 <rect key="frame" x="0.0" y="67" width="375" height="600"/>
                                 <color key="backgroundColor" red="1" green="0.049330440420000003" blue="0.076213708310000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="GameView"/>
@@ -101,7 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="NJ4-Cg-2xf" id="dFq-Sz-RRN"/>
-                        <outlet property="gameView" destination="7n3-hj-2hG" id="ng4-kH-NHl"/>
+                        <outlet property="gameView" destination="7n3-hj-2hG" id="ByC-Zl-WMx"/>
                         <segue destination="dyB-Qf-HJ7" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="Ca3-7g-VQs"/>
                     </connections>
                 </viewController>

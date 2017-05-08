@@ -9,6 +9,8 @@
 import UIKit
 
 class War: UIView {
+    var player = [Card]()
+    var cpu = [Card]()
     
     func viewDidLoad()
     {
@@ -18,5 +20,10 @@ class War: UIView {
         //let image = UIImage(named: player1Hand)
         //let imageView = UIImageView(image: image!)
         print("TEST")
+    }
+    
+    func deal(players: Int, handSize: Int)
+    {
+        
     }
 }
