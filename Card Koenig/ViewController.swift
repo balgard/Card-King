@@ -36,13 +36,8 @@ class ViewController: UIViewController
                 if x == warButton
                 {
                     dvc.gameView = War()
-                    print(dvc.gameView)
                 }
             }
-            /*if String(describing: x.currentAttributedTitle) == "War"
-            {
-                dvc.gameView = War()
-            }*/
         }
     }
     

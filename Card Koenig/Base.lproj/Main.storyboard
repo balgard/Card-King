@@ -103,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="NJ4-Cg-2xf" id="dFq-Sz-RRN"/>
+                        <outlet property="containerView" destination="7n3-hj-2hG" id="Kp6-jm-2Hj"/>
                         <outlet property="gameView" destination="7n3-hj-2hG" id="ByC-Zl-WMx"/>
                         <segue destination="dyB-Qf-HJ7" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="Ca3-7g-VQs"/>
                     </connections>
