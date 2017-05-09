@@ -15,7 +15,7 @@ class GameController: UIViewController
     
     @IBOutlet weak var containerView: UIView!
     var gameView : UIView!
-    
+    var game = ""
     func deal(player: Int, handSize: Int, deckSize: Int)
     {
         
@@ -102,6 +102,17 @@ class GameController: UIViewController
         super.viewDidLoad()
         fillDeck(deck: standardDeck)
         shuffle(deck: standardDeck)
+        selectGame()
+    }
+    
+    func selectGame()
+    {
+        if game == "War"
+        {
+            gameView = War()
+            containerView.addSubview(gameView)
+            
+        }
     }
     
     @IBAction func backPressed(_ sender: UIButton)
