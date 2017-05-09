@@ -13,7 +13,8 @@ class GameController: UIViewController
     var standardDeck = [Card]()
     var otherDeck = [AnyObject]()
     
-    @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var containerView: UIView!
+    var gameView : UIView!
     
     func deal(player: Int, handSize: Int, deckSize: Int)
     {
@@ -101,7 +102,6 @@ class GameController: UIViewController
         super.viewDidLoad()
         fillDeck(deck: standardDeck)
         shuffle(deck: standardDeck)
-        
     }
     
     @IBAction func backPressed(_ sender: UIButton)

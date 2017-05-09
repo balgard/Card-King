@@ -36,13 +36,18 @@ class ViewController: UIViewController
                 if x == warButton
                 {
                     dvc.gameView = War()
-                    print(dvc.gameView)
+                    dvc.containerView = UIView()
+                    if dvc.containerView != nil
+                    {
+                        print("TEST")
+                        dvc.containerView.addSubview(dvc.gameView as! War)
+                    }
+                    else
+                    {
+                        print("NIL")
+                    }
                 }
             }
-            /*if String(describing: x.currentAttributedTitle) == "War"
-            {
-                dvc.gameView = War()
-            }*/
         }
     }
     
