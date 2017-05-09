@@ -14,11 +14,16 @@ class War: UIView {
     
     func viewDidLoad()
     {
-        
+        print("TEST")
     }
     
     func deal(players: Int, handSize: Int)
     {
         
+    }
+    
+    func test()
+    {
+        print("TEST")
     }
 }

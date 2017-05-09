@@ -14,7 +14,7 @@ class GameController: UIViewController
     var otherDeck = [AnyObject]()
     
     @IBOutlet weak var containerView: UIView!
-    var gameView : Any?
+    var gameView : UIView!
     
     func deal(player: Int, handSize: Int, deckSize: Int)
     {
