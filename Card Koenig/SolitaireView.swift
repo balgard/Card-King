@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PresidentView: UIView
+class SolitaireView: UIView
 {
 
     func viewDidLoad()

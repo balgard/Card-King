@@ -14,7 +14,7 @@
 		3F5ACD171E9D3DE1005E9536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5ACD151E9D3DE1005E9536 /* LaunchScreen.storyboard */; };
 		3F6E5FB11E9FDB5A00CD4DE5 /* WarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E5FB01E9FDB5A00CD4DE5 /* WarView.swift */; };
 		3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67831E9D4B7E00E4080C /* Card.swift */; };
-		3FDD67861E9E8A0D00E4080C /* PresidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67851E9E8A0D00E4080C /* PresidentView.swift */; };
+		3FDD67861E9E8A0D00E4080C /* SolitaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67851E9E8A0D00E4080C /* SolitaireView.swift */; };
 		3FDD67881E9FD24100E4080C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD67871E9FD24000E4080C /* GameController.swift */; };
 		61A54B3D1E9FDB720018C444 /* UnoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A54B3C1E9FDB720018C444 /* UnoCard.swift */; };
 		61BC720F1EA6716200E42687 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -31,7 +31,7 @@
 		3F5ACD181E9D3DE1005E9536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6E5FB01E9FDB5A00CD4DE5 /* WarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarView.swift; sourceTree = "<group>"; };
 		3FDD67831E9D4B7E00E4080C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		3FDD67851E9E8A0D00E4080C /* PresidentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresidentView.swift; sourceTree = "<group>"; };
+		3FDD67851E9E8A0D00E4080C /* SolitaireView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolitaireView.swift; sourceTree = "<group>"; };
 		3FDD67871E9FD24000E4080C /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		61A54B3C1E9FDB720018C444 /* UnoCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnoCard.swift; path = ../UnoCard.swift; sourceTree = "<group>"; };
 		61DB579B1EC0D47900CC4082 /* GoFishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoFishView.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				3FDD67831E9D4B7E00E4080C /* Card.swift */,
 				3F6E5FB01E9FDB5A00CD4DE5 /* WarView.swift */,
 				61DB579B1EC0D47900CC4082 /* GoFishView.swift */,
-				3FDD67851E9E8A0D00E4080C /* PresidentView.swift */,
+				3FDD67851E9E8A0D00E4080C /* SolitaireView.swift */,
 				3F5ACD0E1E9D3DE1005E9536 /* ViewController.swift */,
 				3FDD67871E9FD24000E4080C /* GameController.swift */,
 				3F5ACD101E9D3DE1005E9536 /* Main.storyboard */,
@@ -160,7 +160,7 @@
 				3F5ACD0F1E9D3DE1005E9536 /* ViewController.swift in Sources */,
 				3FDD67881E9FD24100E4080C /* GameController.swift in Sources */,
 				61A54B3D1E9FDB720018C444 /* UnoCard.swift in Sources */,
-				3FDD67861E9E8A0D00E4080C /* PresidentView.swift in Sources */,
+				3FDD67861E9E8A0D00E4080C /* SolitaireView.swift in Sources */,
 				3FDD67841E9D4B7E00E4080C /* Card.swift in Sources */,
 				61BC720F1EA6716200E42687 /* (null) in Sources */,
 				3F5ACD0D1E9D3DE1005E9536 /* AppDelegate.swift in Sources */,
