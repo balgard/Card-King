@@ -18,7 +18,7 @@ class SolitaireView: UIView
     
     func shuffle(playerNumber: Int, handSize: Int)
     {
-        
+        print("SHUFFLE")
     }
 
 }
