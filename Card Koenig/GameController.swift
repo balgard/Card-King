@@ -10,7 +10,7 @@ import UIKit
 
 class GameController: UIViewController
 {
-    var standardDeck = [Card]()
+    var standardDeck = [(Card)]()
     var otherDeck = [AnyObject]()
     
     @IBOutlet weak var containerView: UIView!
@@ -29,8 +29,12 @@ class GameController: UIViewController
             var random = Int(arc4random_uniform(UInt32(standardDeck.count)))
             var card = standardDeck.remove(at: random)
             tempDeck.append(card)
+            print("\(card.value)")
+            print("\(card.suite)")
+            print("\(card.rank)")
         }
         standardDeck = tempDeck
+        print("Randomization Complete")
     }
     
     func fillDeck(deck: [AnyObject])
@@ -86,6 +90,7 @@ class GameController: UIViewController
                 c.assignRank(value: c.value)
                 temp.append(c)
                 x += 1
+                //print("\(c.value)")
             }
             x = 0
             i += 1
