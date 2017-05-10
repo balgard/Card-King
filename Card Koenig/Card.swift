@@ -15,6 +15,7 @@ class Card: UIImageView
     var rank = ""
     var color = ""
     var imageName = ""
+    var faceDown = false
     
     
 
@@ -44,6 +45,13 @@ class Card: UIImageView
     
     func setImage(name: String)
     {
+        if faceDown == false
+        {
         self.image = UIImage(named: name)
+        }
+        else
+        {
+            self.image = UIImage(named: "Card-Back-1")
+        }
     }
 }
