@@ -39,7 +39,7 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iox-EK-KgP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-Nl-Zd2" customClass="Card" customModule="Card_Koenig" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-Nl-Zd2" customClass="Card" customModule="Card_Koenig" customModuleProvider="target">
                                 <rect key="frame" x="125" y="420" width="125" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -50,6 +50,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7b-bq-XEn">
+                                <rect key="frame" x="162" y="219" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go Fish"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -59,7 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="card" destination="jOh-Nl-Zd2" id="Xzz-7F-oQc"/>
-                        <outlet property="goFishButton" destination="OrY-Nj-SNY" id="fZX-r4-xFt"/>
+                        <outlet property="goFishButton" destination="j7b-bq-XEn" id="djm-9a-Z8x"/>
                         <outlet property="solitaireButton" destination="fRD-j1-UCT" id="5S1-ta-yLj"/>
                         <outlet property="warButton" destination="J1D-lT-2dM" id="XmH-Ms-1AN"/>
                         <segue destination="O83-U9-t4P" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="JCe-UZ-ptt"/>
