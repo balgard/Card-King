@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    @IBOutlet weak var presidentButton : UIButton!
+    @IBOutlet weak var solitaireButton : UIButton!
     @IBOutlet weak var card: Card!
     @IBOutlet weak var warButton: UIButton!
     var buttons = [UIButton]()
@@ -18,7 +18,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         card.setImage(name: "s01")
-        buttons.append(presidentButton)
+        buttons.append(solitaireButton)
         buttons.append(warButton)
     }
     
@@ -36,6 +36,10 @@ class ViewController: UIViewController
                 if x == warButton
                 {
                     dvc.game = "War"
+                }
+                else if x == solitaireButton
+                {
+                    dvc.game = "Solitaire"
                 }
             }
         }

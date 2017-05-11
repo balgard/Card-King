@@ -10,11 +10,10 @@ import UIKit
 
 class GameController: UIViewController
 {
-    var standardDeck = [Card]()
+    var standardDeck = [(Card)]()
     var otherDeck = [AnyObject]()
     
     @IBOutlet weak var containerView: UIView!
-    var gameView : UIView!
     var game = ""
     func deal(player: Int, handSize: Int, deckSize: Int)
     {
@@ -29,8 +28,12 @@ class GameController: UIViewController
             var random = Int(arc4random_uniform(UInt32(standardDeck.count)))
             var card = standardDeck.remove(at: random)
             tempDeck.append(card)
+            print("\(card.value)")
+            print("\(card.suite)")
+            print("\(card.rank)")
         }
         standardDeck = tempDeck
+        print("Randomization Complete")
     }
     
     func fillDeck(deck: [AnyObject])
@@ -86,6 +89,7 @@ class GameController: UIViewController
                 c.assignRank(value: c.value)
                 temp.append(c)
                 x += 1
+                //print("\(c.value)")
             }
             x = 0
             i += 1
@@ -109,11 +113,18 @@ class GameController: UIViewController
     {
         if game == "War"
         {
-            gameView = War()
+            var gameView = War(frame:(CGRect(x:0, y:67, width:375, height: 600)))
             containerView.addSubview(gameView)
+        }
+        else if game == "Solitaire"
+        {
+            var gameView = SolitaireView(frame: CGRect(x: 0, y:67, width: 375, height: 600))
+            containerView.addSubview(gameView)
+            gameView.shuffle(playerNumber: 0, handSize: 0)
             
         }
     }
+    
     
     @IBAction func backPressed(_ sender: UIButton)
     {
