@@ -26,30 +26,57 @@ class GoFishView: UIView {
     var i = 0
     var k = 0
     var x = 0
+    var c1Pos = 0
+    var c2Pos = 0
+    var c3Pos = 0
+    var c4Pos = 0
+    var count = 0
     
     func viewDidLoad()  {
         
     }
     
+    //Change to check for pairs of four
     func checkForUserOnePairs()  {
         i = userOneCards.count
         k = 0
         x = 0
+        count = 0
+        c1Pos = 0
+        c2Pos = 0
+        c3Pos = 0
+        c4Pos = 0
         while(k < i)    {
             x = k + 1
+            c1Pos = k
             while(x < i)    {
-                if(userOneCards[k].value == userOneCards[x].value)  {
-                    userOnePairs.append(userOneCards[k])
-                    userOneCards.remove(at: x)
-                    userOneCards.remove(at: k)
+                if(count == 0 && userOneCards[k].value == userOneCards[x].value)  {
+                    c2Pos = x
+                    count += 1
+                }   else if(count == 1 && userOneCards[k].value == userOneCards[x].value)   {
+                    c3Pos = x
+                    count += 1
+                }   else if(count == 2 && userOneCards[k].value == userOneCards[x].value)   {
+                    c4Pos = x
+                    count += 1
                 }
+                x += 1
             }
-            k += 1
+            if(count == 3)  {
+                userOnePairs.append(userOneCards[k])
+                userOneCards.remove(at: c4Pos)
+                userOneCards.remove(at: c3Pos)
+                userOneCards.remove(at: c2Pos)
+                userOneCards.remove(at: c1Pos)
+                i = userOneCards.count
+            }   else    {
+                k += 1
+            }
         }
     }
     
     func checkForUserTwoPairs()  {
-        i = userTwoCards.count
+        /*i = userTwoCards.count
         k = 0
         x = 0
         while(k < i)    {
@@ -63,6 +90,77 @@ class GoFishView: UIView {
                 }
             }
             k += 1
+        }*/
+        i = userTwoCards.count
+        k = 0
+        x = 0
+        count = 0
+        c1Pos = 0
+        c2Pos = 0
+        c3Pos = 0
+        c4Pos = 0
+        while(k < i)    {
+            x = k + 1
+            c1Pos = k
+            while(x < i)    {
+                if(count == 0 && userTwoCards[k].value == userTwoCards[x].value)  {
+                    c2Pos = x
+                    count += 1
+                }   else if(count == 1 && userTwoCards[k].value == userTwoCards[x].value)   {
+                    c3Pos = x
+                    count += 1
+                }   else if(count == 2 && userTwoCards[k].value == userTwoCards[x].value)   {
+                    c4Pos = x
+                    count += 1
+                }
+                x += 1
+            }
+            if(count == 3)  {
+                userTwoPairs.append(userTwoCards[k])
+                userTwoCards.remove(at: c4Pos)
+                userTwoCards.remove(at: c3Pos)
+                userTwoCards.remove(at: c2Pos)
+                userTwoCards.remove(at: c1Pos)
+                i = userTwoCards.count
+            }   else    {
+                k += 1
+            }
+        }
+    }
+    
+    func userOnePickUpCards(selectedCards: [Card])  {
+        if(drawCards.count != 0)  {
+            userOneCards.append(drawCards[0])
+            drawCards.remove(at: 0)
+        }
+    }
+    
+    func userTwoPickUpCards(selectedCards: [Card])  {
+        if(drawCards.count != 0)  {
+            userTwoCards.append(drawCards[0])
+            drawCards.remove(at: 0)
+        }
+    }
+    
+    func userOneDealMidGame()   {
+        if(userOneCards.count == 0) {
+            while(userOneCards.count < 7)   {
+                if(drawCards.count != 0)    {
+                    userOneCards.append(drawCards[0])
+                    drawCards.remove(at: 0)
+                }
+            }
+        }
+    }
+    
+    func userTwoDealMidGame()   {
+        if(userTwoCards.count == 0) {
+            while(userTwoCards.count < 7)   {
+                if(drawCards.count != 0)    {
+                    userTwoCards.append(drawCards[0])
+                    drawCards.remove(at: 0)
+                }
+            }
         }
     }
     
