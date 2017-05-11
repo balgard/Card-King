@@ -8,7 +8,7 @@
 /*
  Ideas
  
- Use a scroll list to view all the cards that you have with small images of each card on the side
+ Use a scroll view to view all the cards that you have with small images of each card on the side
  When the games starts go through each players' deck and match the pairs that a given at the start
  if there are no more cards left count the players' pairs whoever has the most wins
 */
