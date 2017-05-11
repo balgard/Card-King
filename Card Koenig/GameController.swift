@@ -119,6 +119,11 @@ class GameController: UIViewController
             containerView.addSubview(gameView)
             gameView.shuffle(playerNumber: 0, handSize: 0)
         }
+        else if game == "Go Fish"
+        {
+            var gameView = GoFishView(frame:CGRect(x:0, y:67, width:375,height:600))
+            containerView.addSubview(gameView)
+        }
     }
     
     

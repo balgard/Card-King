@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    
     @IBOutlet weak var solitaireButton : UIButton!
     @IBOutlet weak var card: Card!
     @IBOutlet weak var warButton: UIButton!
+    @IBOutlet weak var goFishButton: UIButton!
+    
     var buttons = [UIButton]()
     
     override func viewDidLoad()
@@ -20,6 +23,7 @@ class ViewController: UIViewController
         card.setImage(name: "s01")
         buttons.append(solitaireButton)
         buttons.append(warButton)
+        buttons.append(goFishButton)
     }
     
     @IBAction func backToMenu(segue: UIStoryboardSegue)
@@ -40,6 +44,10 @@ class ViewController: UIViewController
                 else if x == solitaireButton
                 {
                     dvc.game = "Solitaire"
+                }
+                else if x == goFishButton
+                {
+                    dvc.game = "Go Fish"
                 }
             }
         }
