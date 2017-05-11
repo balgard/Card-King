@@ -13,6 +13,7 @@ class GameController: UIViewController
     var standardDeck = [(Card)]()
     var otherDeck = [AnyObject]()
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
     var game = ""
     func deal(player: Int, handSize: Int, deckSize: Int)

@@ -95,6 +95,12 @@
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-hj-2hG" userLabel="containerView">
                                 <rect key="frame" x="0.0" y="67" width="375" height="600"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-RO-p7r">
+                                        <rect key="frame" x="16" y="286" width="240" height="306"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </scrollView>
+                                </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="containerView"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ4-Cg-2xf">
@@ -122,6 +128,7 @@
                     <connections>
                         <outlet property="backButton" destination="NJ4-Cg-2xf" id="dFq-Sz-RRN"/>
                         <outlet property="containerView" destination="7n3-hj-2hG" id="5Qg-ao-pgc"/>
+                        <outlet property="scrollView" destination="bgJ-RO-p7r" id="jTS-HC-Dgs"/>
                         <segue destination="dyB-Qf-HJ7" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="Ca3-7g-VQs"/>
                     </connections>
                 </viewController>
