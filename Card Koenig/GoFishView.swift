@@ -20,6 +20,7 @@ class GoFishView: UIView {
     var userOnePairs = [Card]()
     var userTwoCards = [Card]()
     var userTwoPairs = [Card]()
+    var drawCards = [Card]()
     var userTurn = true
     var index = 0
     var i = 0
@@ -68,11 +69,10 @@ class GoFishView: UIView {
     func userOneCheckDeck(selectedCard: Card)    {
         for card in userTwoCards    {
             if(selectedCard.value == card.value)    {
-                print("Is in cpu")
+                print("Is in user two")
                 userOneCards.append(card)
                 userTwoCards.remove(at: userTwoCards.index(of: card)!)
                 checkForUserOnePairs()
-                break
             }
         }
     }
@@ -80,11 +80,23 @@ class GoFishView: UIView {
     func userTwoCheckDeck(selectedCard: Card)    {
         for card in userOneCards    {
             if(selectedCard.value == card.value)    {
-                print("Is in user")
+                print("Is in user one")
                 userTwoCards.append(card)
                 userOneCards.remove(at: userOneCards.index(of: card)!)
                 checkForUserTwoPairs()
-                break
+            }
+        }
+    }
+    
+    func goFishDeal(/*player: Int, handSize: Int, */deckSize: Int)    {
+        while(deckSize != 0)    {
+            if(userOneCards.count < 7) {
+                userOneCards.append()
+                //Remove card from the deck
+            }   else if(userTwoCards.count < 7)    {
+                userTwoCards.append()
+            }   else    {
+                drawCards.append()
             }
         }
     }
