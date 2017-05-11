@@ -28,18 +28,14 @@ class GameController: UIViewController
             var random = Int(arc4random_uniform(UInt32(standardDeck.count)))
             var card = standardDeck.remove(at: random)
             tempDeck.append(card)
-            print("\(card.value)")
-            print("\(card.suite)")
-            print("\(card.rank)")
         }
         standardDeck = tempDeck
-        print("Randomization Complete")
     }
     
     func fillDeck(deck: [AnyObject])
     {
         var i = 0
-        var x = 0
+        var x = 1
         var temp = deck
         while i < 4
         {
@@ -70,7 +66,7 @@ class GameController: UIViewController
                 suite = "Spades"
                 color = "Black"
             }
-            while x < 13
+            while x < 14
             {
                 var imageName = ""
                 if x < 10
@@ -87,11 +83,11 @@ class GameController: UIViewController
                 c.color = color
                 c.imageName = imageName
                 c.assignRank(value: c.value)
+                c.setImage(name: c.imageName)
                 temp.append(c)
                 x += 1
-                //print("\(c.value)")
             }
-            x = 0
+            x = 1
             i += 1
         }
         standardDeck = temp as! [Card]
@@ -121,7 +117,6 @@ class GameController: UIViewController
             var gameView = SolitaireView(frame: CGRect(x: 0, y:67, width: 375, height: 600))
             containerView.addSubview(gameView)
             gameView.shuffle(playerNumber: 0, handSize: 0)
-            
         }
     }
     
