@@ -129,13 +129,11 @@ class GameController: UIViewController
             shuffle(deck: standardDeck)
             for card in gameView.userOneCards
             {
-            scrollView.addSubview(card)
+            pickerView.addSubview(card)
             }
             gameView.gameStart(deck: standardDeck)
             while gameView.gamePlaying == true
             {
-                gameView.selectedCard =
-                gameView.play()
             }
             containerView.addSubview(gameView)
         }

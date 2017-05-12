@@ -24,6 +24,7 @@ class GoFishView: UIView {
     var userTurn = true
     var index = 0
     var gamePlaying = true
+    var selectedCard = Card()
     
     //For checkForUserPairs
     var i = 0
@@ -41,6 +42,7 @@ class GoFishView: UIView {
     
     //Change to check for pairs of four
     func checkForCompleted(hand: [Card])  {
+        var temp = hand
         i = hand.count
         k = 0
         x = 0
@@ -66,49 +68,87 @@ class GoFishView: UIView {
                 x += 1
             }
             if(count == 3)  {
-                hand.append(userOneCards[k])
-                hand.remove(at: c4Pos)
-                hand.remove(at: c3Pos)
-                hand.remove(at: c2Pos)
-                hand.remove(at: c1Pos)
-                i = hand.count
-                organizeCardPair()
+                temp.append(temp[k])
+                temp.remove(at: c4Pos)
+                temp.remove(at: c3Pos)
+                temp.remove(at: c2Pos)
+                temp.remove(at: c1Pos)
+                i = temp.count
+                organizeCardDeck()
             }   else    {
                 k += 1
             }
+        }
+        if hand == userOneCards
+        {
+            userOneCards = temp
+        }
+        else
+        {
+            userTwoCards = temp
         }
     }
     
     
     
     func dealMidGame(hand: [Card])   {
+        var temp = hand
         if(hand.count == 0) {
             while(hand.count < 7)   {
                 if(drawCards.count != 0)    {
-                    hand.append(drawCards[0])
+                    temp.append(drawCards[0])
                     drawCards.remove(at: 0)
                 }
             }
         }
+        if hand == userOneCards
+        {
+            userOneCards = temp
+        }
+        else
+        {
+            userTwoCards = temp
+        }
     }
     func draw(drawer:[Card])
     {
+        var temp = drawer
         if drawCards.count > 0
         {
-            drawer.append(drawCards[0])
+            temp.append(drawCards[0])
             drawCards.remove(at: 0)
+        }
+        if drawer == userOneCards
+        {
+            userOneCards = temp
+        }
+        else
+        {
+            userTwoCards = temp
         }
     }
     
     func checkDifferentHand(checked: [Card], asker: [Card], card: Card)
     {
+        var temp = asker
+        var m = checked
         for x in checked
         {
             if x.value == card.value
             {
-                asker.append(x)
-                checked.remove(at: checked.index(of: x)!)
+                temp.append(x)
+                m.remove(at: m.index(of: x)!)
             }
+        }
+        if asker == userOneCards
+        {
+            userOneCards = temp
+            userTwoCards = m
+        }
+        else
+        {
+            userTwoCards = temp
+            userOneCards = m
         }
     }
     
