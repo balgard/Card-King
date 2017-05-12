@@ -98,6 +98,9 @@
                                         <rect key="frame" x="248" y="294" width="111" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Select Card"/>
+                                        <connections>
+                                            <action selector="selectCardButton:" destination="lEs-Nw-akQ" eventType="touchUpInside" id="JIY-4l-7Ja"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOP-ot-NUP">
                                         <rect key="frame" x="248" y="332" width="111" height="128"/>
@@ -118,6 +121,13 @@
                                         <rect key="frame" x="132" y="158" width="111" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cards Left In Deck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoS-bW-sja">
+                                        <rect key="frame" x="248" y="486" width="111" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="containerView"/>
                             </view>
@@ -146,6 +156,8 @@
                     <connections>
                         <outlet property="backButton" destination="NJ4-Cg-2xf" id="dFq-Sz-RRN"/>
                         <outlet property="containerView" destination="7n3-hj-2hG" id="5Qg-ao-pgc"/>
+                        <outlet property="cpuCardsLeft" destination="8ay-i4-x3U" id="XBU-Jk-LxH"/>
+                        <outlet property="playerCardsLeft" destination="ZoS-bW-sja" id="gxv-nW-90X"/>
                         <outlet property="scrollView" destination="bgJ-RO-p7r" id="jTS-HC-Dgs"/>
                         <segue destination="dyB-Qf-HJ7" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="Ca3-7g-VQs"/>
                     </connections>

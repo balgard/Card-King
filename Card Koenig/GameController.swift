@@ -15,6 +15,8 @@ class GameController: UIViewController
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var cpuCardsLeft: UILabel!
+    @IBOutlet weak var playerCardsLeft: UILabel!
     var game = ""
     func deal(player: Int, handSize: Int, deckSize: Int)
     {
