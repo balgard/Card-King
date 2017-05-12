@@ -129,6 +129,15 @@ class GoFishView: UIView {
     }
     
     
+    func playGame()
+    {
+        while drawCards.count > 0 && userOneCards.count > 0 && userTwoCards.count > 0
+        {
+            
+        }
+    }
+    
+    
     func organizeCardDeck() {
         userOneCards = userOneCards.sorted { $0.value < $1.value }
         userTwoCards = userTwoCards.sorted { $0.value < $1.value }
