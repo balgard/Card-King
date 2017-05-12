@@ -90,10 +90,6 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7n3-hj-2hG" userLabel="containerView">
                                 <rect key="frame" x="0.0" y="67" width="375" height="600"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-RO-p7r">
-                                        <rect key="frame" x="0.0" y="294" width="240" height="306"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpU-ct-Du3">
                                         <rect key="frame" x="248" y="294" width="111" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,6 +124,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tsr-7t-CCx">
+                                        <rect key="frame" x="0.0" y="300" width="243" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="containerView"/>
                             </view>
@@ -157,8 +157,8 @@
                         <outlet property="backButton" destination="NJ4-Cg-2xf" id="dFq-Sz-RRN"/>
                         <outlet property="containerView" destination="7n3-hj-2hG" id="5Qg-ao-pgc"/>
                         <outlet property="cpuCardsLeft" destination="8ay-i4-x3U" id="XBU-Jk-LxH"/>
+                        <outlet property="pickerView" destination="tsr-7t-CCx" id="1Bz-lF-Tjk"/>
                         <outlet property="playerCardsLeft" destination="ZoS-bW-sja" id="gxv-nW-90X"/>
-                        <outlet property="scrollView" destination="bgJ-RO-p7r" id="jTS-HC-Dgs"/>
                         <segue destination="dyB-Qf-HJ7" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="Ca3-7g-VQs"/>
                     </connections>
                 </viewController>

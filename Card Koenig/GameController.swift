@@ -13,7 +13,7 @@ class GameController: UIViewController
     var standardDeck = [(Card)]()
     var otherDeck = [AnyObject]()
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cpuCardsLeft: UILabel!
     @IBOutlet weak var playerCardsLeft: UILabel!
