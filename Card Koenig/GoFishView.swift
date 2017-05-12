@@ -23,6 +23,7 @@ class GoFishView: UIView {
     var drawCards = [Card]()
     var userTurn = true
     var index = 0
+    var gamePlaying = true
     
     //For checkForUserPairs
     var i = 0
@@ -131,10 +132,7 @@ class GoFishView: UIView {
     
     func playGame()
     {
-        while drawCards.count > 0 && userOneCards.count > 0 && userTwoCards.count > 0
-        {
-            
-        }
+        
     }
     
     

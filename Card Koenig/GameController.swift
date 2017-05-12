@@ -17,13 +17,12 @@ class GameController: UIViewController
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cpuCardsLeft: UILabel!
     @IBOutlet weak var playerCardsLeft: UILabel!
+    var selectedCard = Card()
     var game = ""
-    func deal(player: Int, handSize: Int, deckSize: Int)
+    
+    @IBAction func selectCardButton(_ sender: UIButton)
     {
         
-    }
-    
-    @IBAction func selectCardButton(_ sender: UIButton) {
     }
     
     func shuffle(deck: [AnyObject])
@@ -128,10 +127,21 @@ class GameController: UIViewController
             var gameView = GoFishView(frame:CGRect(x:0, y:67, width:375,height:600))
             fillDeck(deck: standardDeck)
             shuffle(deck: standardDeck)
+            for card in gameView.userOneCards
+            {
+            scrollView.addSubview(card)
+            }
             gameView.gameStart(deck: standardDeck)
+            while gameView.gamePlaying == true
+            {
+                gameView.selectedCard =
+                gameView.play()
+            }
             containerView.addSubview(gameView)
         }
     }
+    
+
     
     
     @IBAction func backPressed(_ sender: UIButton)
