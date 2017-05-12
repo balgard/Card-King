@@ -101,8 +101,7 @@ class GameController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        fillDeck(deck: standardDeck)
-        shuffle(deck: standardDeck)
+        
         selectGame()
     }
     
@@ -122,6 +121,9 @@ class GameController: UIViewController
         else if game == "Go Fish"
         {
             var gameView = GoFishView(frame:CGRect(x:0, y:67, width:375,height:600))
+            fillDeck(deck: standardDeck)
+            shuffle(deck: standardDeck)
+            gameView.gameStart(deck: standardDeck)
             containerView.addSubview(gameView)
         }
     }
