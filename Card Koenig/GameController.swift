@@ -21,6 +21,9 @@ class GameController: UIViewController
         
     }
     
+    @IBAction func selectCardButton(_ sender: UIButton) {
+    }
+    
     func shuffle(deck: [AnyObject])
     {
         var tempDeck = [Card]()
