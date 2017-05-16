@@ -9,7 +9,7 @@
 import UIKit
 
 
-class GameController: UIViewController
+class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
     var standardDeck = [(Card)]()
     var otherDeck = [AnyObject]()
@@ -20,6 +20,7 @@ class GameController: UIViewController
     @IBOutlet weak var playerCardsLeft: UILabel!
     var selectedCard = Card()
     var game = ""
+    var pickerData = [String]()
     
     @IBAction func selectCardButton(_ sender: UIButton)
     {
@@ -117,8 +118,29 @@ class GameController: UIViewController
     {
         super.viewDidLoad()
         
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        
         selectGame()
     }
+    
+    /*  Start of PickerView Stuff   */
+    
+    //Returns the number of columns
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //Returns the number of rows
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    /*  End of PickerView Stuff */
     
     func selectGame()
     {
@@ -141,9 +163,8 @@ class GameController: UIViewController
             gameView.gameStart(deck:standardDeck)
             for card in gameView.userOneCards
             {
-                var temp = UILabel()
-                temp.text = card.getDescription()
-                pickerView.addSubview(temp)  //doesn't display anything
+                var temp = card.getDescription()
+                pickerData.append(temp)
             }
             containerView.addSubview(gameView)
         }
