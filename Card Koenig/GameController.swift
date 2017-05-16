@@ -115,8 +115,6 @@ class GameController: UIViewController
         {
             var gameView = War(frame:(CGRect(x:0, y:67, width:375, height: 600)))
             containerView.addSubview(gameView)
-            for card in gameView.player{
-            }
         }
         else if game == "Solitaire"
         {
