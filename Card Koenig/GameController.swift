@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GameController: UIViewController
 {
     var standardDeck = [(Card)]()
@@ -22,7 +23,17 @@ class GameController: UIViewController
     
     @IBAction func selectCardButton(_ sender: UIButton)
     {
-        
+        for x in containerView.subviews
+        {
+            if var gameView = x as? GoFishView
+            {
+                print("TEST")
+            }
+            else
+            {
+                
+            }
+        }
     }
     
     func shuffle(deck: [AnyObject])
@@ -127,13 +138,10 @@ class GameController: UIViewController
             var gameView = GoFishView(frame:CGRect(x:0, y:67, width:375,height:600))
             fillDeck(deck: standardDeck)
             shuffle(deck: standardDeck)
+            gameView.gameStart(deck:standardDeck)
             for card in gameView.userOneCards
             {
-            pickerView.addSubview(card)
-            }
-            gameView.gameStart(deck: standardDeck)
-            while gameView.gamePlaying == true
-            {
+                pickerView.addSubview(card)  //doesn't display anything
             }
             containerView.addSubview(gameView)
         }

@@ -11,7 +11,7 @@
  Use a scroll view to view all the cards that you have with small images of each card on the side
  When the games starts go through each players' deck and match the pairs that a given at the start
  if there are no more cards left count the players' pairs whoever has the most wins
-*/
+ */
 import UIKit
 
 class GoFishView: UIView {
@@ -156,23 +156,27 @@ class GoFishView: UIView {
     {
         var temp = [Card]()
         temp = deck
-        while(temp.count != 0)
+        while (userOneCards.count < 7)
         {
-            if(userOneCards.count < 7)
-            {
-                userOneCards.append(temp[0])
-                temp.remove(at: 0)
-                userTwoCards.append(temp[0])
-                temp.remove(at:0)
-            }
+            userOneCards.append(temp[0])
+            temp.remove(at: 0)
+            userTwoCards.append(temp[0])
+            temp.remove(at:0)
         }
         drawCards = temp
     }
     
     
-    func playGame()
+    func isGameOver(deckOne : [Card], deckTwo: [Card], draw: [Card]) -> Bool
     {
-        
+        if deckOne.count == 0 && deckTwo.count == 0 && draw.count == 0
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
     }
     
     
@@ -180,7 +184,7 @@ class GoFishView: UIView {
         userOneCards = userOneCards.sorted { $0.value < $1.value }
         userTwoCards = userTwoCards.sorted { $0.value < $1.value }
     }
-
+    
     func gameStart(deck: [Card])
     {
         userOneCards.removeAll()
@@ -188,6 +192,5 @@ class GoFishView: UIView {
         userTwoCards.removeAll()
         userTwoPairs.removeAll()
         goFishDeal(deck: deck)
-        userTurn = true
     }
 }
