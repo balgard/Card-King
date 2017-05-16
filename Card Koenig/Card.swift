@@ -54,4 +54,8 @@ class Card: UIImageView
             self.image = UIImage(named: "Card-Back-1")
         }
     }
+    func getDescription() -> String
+    {
+        return "\(self.rank) of \(self.suite)"
+    }
 }

@@ -141,7 +141,9 @@ class GameController: UIViewController
             gameView.gameStart(deck:standardDeck)
             for card in gameView.userOneCards
             {
-                pickerView.addSubview(card)  //doesn't display anything
+                var temp = UILabel()
+                temp.text = card.getDescription()
+                pickerView.addSubview(temp)  //doesn't display anything
             }
             containerView.addSubview(gameView)
         }
