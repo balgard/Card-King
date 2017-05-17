@@ -140,6 +140,12 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
+        var tempSelect = pickerData[row]
+        //have var = pickerData[row]
+    }
+
+    
     /*  End of PickerView Stuff */
     
     func selectGame()
