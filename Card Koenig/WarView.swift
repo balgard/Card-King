@@ -17,68 +17,12 @@
 import UIKit
 
 class War: UIView {
-//    var player = [Card]()
-//    var cpu = [Card]()
-//    var drawCards = [Card]()
-//    var playerTurn = true
-//    var index = 0
-//    var count = 0
-//    var gameStatus = true
-//
-//
-//func viewDidLoad()
-//{
-//    print("TEST")
-//}
-//    func gameBegin(){
-//        
-//    }
-//
-//func gameReady(deck: [Card]){
-//    var currentHand = [Card]()
-//    currentHand = deck
-//    while(currentHand.count != 0){
-//    if player.count < 26 {
-//        player.append(currentHand[0])
-//        currentHand.remove(at: 0)
-//        cpu.append(currentHand[0])
-//        currentHand.remove(at:0)
-//        gameStatus = false
-//    }
-//    else { gameStatus = true
-//        gameBegin()
-//    }
-//    }
-//    playerTurn = true
-//}
-//func displayWinLossMessage(message: String){
-//    let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-//    let alertAction = UIAlertAction(title: "Reset", style: .default) {
-//        (action) -> Void in self.resetGame()
-//    }
-//    alert.addAction(alertAction)
-//    present(alert, animated: true, completion: nil)
-//    gameStatus = false
-//}
-//
-//func checkForWinner(){
-//    if player.count == 0 || cpu.count == 0{
-//        displayWinLossMessage(message: "Player 1 Win")
-//        resetGame()
-//    }
-//    
-//    func resetGame(){
-//        
-//    }
-//    
-//    func deal(players: Int, handSize: Int)
-//    {
-//      
-//    }
-//    
-//    func test()
-//    {
-//        print("TEST")
-//    }
-//}
+    var player = [Card]()
+    var cpu = [Card]()
+    var drawCards = [Card]()
+    var playerTurn = true
+    var index = 0
+    var count = 0
+    var gameStatus = true
+
 }
