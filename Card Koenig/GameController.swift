@@ -146,8 +146,23 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     {
         if game == "War"
         {
+            containerView.removeConstraints(containerView.constraints)
+            var temp = containerView.subviews
+            for x in temp{
+                x.removeFromSuperview()
+            }
             var gameView = War(frame:(CGRect(x:0, y:67, width:375, height: 600)))
             containerView.addSubview(gameView)
+            var cpuImage = War(frame:(CGRect(x:132, y:0, width: 111, height: 130)))
+            gameView.addSubview(cpuImage)
+            var cpuCard = War(frame:(CGRect(x:244, y:209, width: 111, height: 130)))
+            gameView.addSubview(cpuCard)
+            var playerImage = War(frame:(CGRect(x:132, y:420, width: 111, height: 130)))
+            gameView.addSubview(playerImage)
+            var playerCard = War(frame:(CGRect(x:21, y:209, width: 111, height: 130)))
+            gameView.addSubview(playerCard)
+            var selectCard = War(frame:(CGRect(x:125, y:383, width: 124, height: 30)))
+            gameView.addSubview(selectCard)
         }
         else if game == "Solitaire"
         {
