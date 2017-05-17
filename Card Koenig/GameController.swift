@@ -166,7 +166,16 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 var temp = card.getDescription()
                 pickerData.append(temp)
             }
+            var temp = containerView.constraints
+            for x in containerView.subviews
+            {
+                gameView.addSubview(x)
+                //x.removeFromSuperview()
+            }
             containerView.addSubview(gameView)
+            //gameView.removeConstraints(gameView.constraints)
+            //gameView.addConstraints(temp)
+
         }
     }
     
