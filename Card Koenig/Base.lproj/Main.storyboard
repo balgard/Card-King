@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -129,7 +129,7 @@
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
                                     </pickerView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card-Back-6" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-3B-1Uh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card-Back-1" translatesAutoresizingMaskIntoConstraints="NO" id="dr7-3B-1Uh">
                                         <rect key="frame" x="132" y="204" width="111" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -142,6 +142,13 @@
                                             <action selector="selectCardButton:" destination="lEs-Nw-akQ" eventType="touchUpInside" id="JIY-4l-7Ja"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cards Left:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="439-35-08s">
+                                        <rect key="frame" x="2" y="259" width="130" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="containerView"/>
                             </view>
@@ -158,10 +165,13 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="NJ4-Cg-2xf" id="dFq-Sz-RRN"/>
+                        <outlet property="cardsLeft" destination="439-35-08s" id="KRS-Rd-ouB"/>
                         <outlet property="containerView" destination="7n3-hj-2hG" id="5Qg-ao-pgc"/>
                         <outlet property="cpuCardsLeft" destination="8ay-i4-x3U" id="XBU-Jk-LxH"/>
+                        <outlet property="otherScore" destination="8ay-i4-x3U" id="ljJ-dL-Znb"/>
                         <outlet property="pickerView" destination="tsr-7t-CCx" id="1Bz-lF-Tjk"/>
                         <outlet property="playerCardsLeft" destination="ZoS-bW-sja" id="gxv-nW-90X"/>
+                        <outlet property="playerScore" destination="ZoS-bW-sja" id="LA4-Ty-nNV"/>
                         <segue destination="dyB-Qf-HJ7" kind="unwind" identifier="unwindSegue" unwindAction="backToMenuWithSegue:" id="Ca3-7g-VQs"/>
                     </connections>
                 </viewController>
@@ -172,6 +182,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Card-Back-6" width="768" height="1063"/>
+        <image name="Card-Back-1" width="768" height="1063"/>
     </resources>
 </document>

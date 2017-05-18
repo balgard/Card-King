@@ -14,6 +14,10 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var standardDeck = [(Card)]()
     var otherDeck = [AnyObject]()
     
+    
+    @IBOutlet weak var cardsLeft: UILabel!
+    @IBOutlet weak var playerScore: UILabel!
+    @IBOutlet weak var otherScore: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cpuCardsLeft: UILabel!
