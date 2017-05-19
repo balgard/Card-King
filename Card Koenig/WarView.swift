@@ -26,8 +26,24 @@ class War: UIView {
     var gameStatus = true
     
     
-    func playCard(deck: [Card]){
+    func playCard(){
         //playerCard = standardDeck.imageName
+        var userOneTemp = userOneCards[0]
+        userOneCards.remove(at: 0)
+        var userTwoTemp = userTwoCards[0]
+        userTwoCards.remove(at: 0)
+        
+        if(userOneTemp.value > userTwoTemp.value) {
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userTwoTemp)
+        }   else if(userTwoTemp.value > userOneTemp.value)  {
+            userTwoCards.append(userOneTemp)
+            userTwoCards.append(userTwoTemp)
+        }   else if(userTwoTemp.value == userOneTemp.value) {
+            warEvent(uOne: userOneTemp, uTwo: userTwoTemp)
+        }
+    }
+    func warEvent(uOne : Card, uTwo : Card) {
         
     }
     func warDeal(deck: [Card]){

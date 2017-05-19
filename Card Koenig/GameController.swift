@@ -34,6 +34,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             if var gameView = x as? GoFishView
             {
                 print("TEST")
+                
             }
             else
             {
@@ -44,9 +45,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func buttonAction(sender: UIButton!){
         
         print("Button Tapped")
-
-        
-    }
+}
     func shuffle(deck: [AnyObject])
     {
         var tempDeck = [Card]()
@@ -195,7 +194,6 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
             }
             gameView.gameBegin(deck: standardDeck)
-            gameView.playCard(deck: standardDeck)
     }
         else if game == "Solitaire"
         {
