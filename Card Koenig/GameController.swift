@@ -156,24 +156,30 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     {
         if game == "War"
         {
+            var temp = containerView.constraints
             containerView.removeConstraints(containerView.constraints)
-            var temp = containerView.subviews
-            for x in temp{
+            for x in containerView.subviews{
                 x.removeFromSuperview()
             }
             var gameView = War(frame:(CGRect(x:0, y:67, width:375, height: 600)))
-            containerView.addSubview(gameView)
-            var cpuImage = War(frame:(CGRect(x:132, y:0, width: 111, height: 130)))
+            var cpuImage = UIImageView(image: UIImage(named: "Card-Back-1"))
+            cpuImage.frame = CGRect(x:132, y: 0, width: 111, height: 130)
             gameView.addSubview(cpuImage)
-            var cpuCard = War(frame:(CGRect(x:244, y:209, width: 111, height: 130)))
+            var cpuCard = UIImageView(image: UIImage(named: "Card-Back-1"))
+            cpuCard.frame = CGRect(x:244, y:209, width: 111, height: 130)
             gameView.addSubview(cpuCard)
-            var playerImage = War(frame:(CGRect(x:132, y:420, width: 111, height: 130)))
+            var playerImage = UIImageView(image: UIImage(named: "Card-Back-1"))
+            playerImage.frame = CGRect(x:132, y:420, width: 111, height: 130)
             gameView.addSubview(playerImage)
-            var playerCard = War(frame:(CGRect(x:21, y:209, width: 111, height: 130)))
+            var playerCard = UIImageView(image: UIImage(named: "Card-Back-1"))
+            playerCard.frame = CGRect(x:21, y:209, width: 111, height: 130)
             gameView.addSubview(playerCard)
-            var selectCard = War(frame:(CGRect(x:125, y:383, width: 124, height: 30)))
+            var selectCard = UIButton(type: .system)
+            selectCard.frame = CGRect(x:125, y:383, width: 124, height: 30)
+            selectCard.setTitle("Flip Card", for: .normal)
             gameView.addSubview(selectCard)
-        }
+            containerView.addSubview(gameView)
+    }
         else if game == "Solitaire"
         {
             var gameView = SolitaireView(frame: CGRect(x: 0, y:67, width: 375, height: 600))
