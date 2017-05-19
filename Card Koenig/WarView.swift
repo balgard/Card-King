@@ -43,8 +43,31 @@ class War: UIView {
             warEvent(uOne: userOneTemp, uTwo: userTwoTemp)
         }
     }
+    //This code below is the instance a tie occurs.
     func warEvent(uOne : Card, uTwo : Card) {
-        
+        var userOneTemp = userOneCards[0]
+        userOneCards.remove(at: 1)
+        userOneCards.remove(at: 2)
+        userOneCards.remove(at: 3)
+        var userTwoTemp = userTwoCards[0]
+        userTwoCards.remove(at: 1)
+        userTwoCards.remove(at: 2)
+        userTwoCards.remove(at: 3)
+        if(userOneCards[3].value > userTwoCards[3].value) {
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userTwoTemp)
+            userOneCards.append(userTwoTemp)
+            userOneCards.append(userTwoTemp)
+        } else if (userTwoTemp.value > userOneTemp.value)  {
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userOneTemp)
+            userOneCards.append(userTwoTemp)
+            userOneCards.append(userTwoTemp)
+            userOneCards.append(userTwoTemp)
+        }
     }
     func warDeal(deck: [Card]){
         var temp = [Card]()
