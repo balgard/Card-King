@@ -17,12 +17,51 @@
 import UIKit
 
 class War: UIView {
-    var player = [Card]()
-    var cpu = [Card]()
+    var userOneCards = [Card]()
+    var userTwoCards = [Card]()
     var drawCards = [Card]()
     var playerTurn = true
     var index = 0
     var count = 0
     var gameStatus = true
-
-}
+    
+    
+    func playCard(deck: [Card]){
+        //playerCard = standardDeck.imageName
+        
+    }
+    func warDeal(deck: [Card]){
+        var temp = [Card]()
+        temp = deck
+        while (userOneCards.count < 26){
+            userOneCards.append(temp[0])
+            temp.remove(at: 0)
+            userTwoCards.append(temp[0])
+            temp.remove(at: 0)
+            print("\(userOneCards.count)")
+        }
+        drawCards = temp
+    }
+    
+    func draw(drawer: [Card]){
+        var temp = drawer
+        if drawCards.count > 0{
+            temp.append(drawCards[0])
+            drawCards.remove(at: 0)
+        }
+        if drawer == userOneCards{
+            userOneCards = temp
+            print("User 1")
+        }
+        else
+        {
+            userTwoCards = temp
+            print("User 2")
+        }
+    }
+    func gameBegin(deck: [Card]){
+        userOneCards.removeAll()
+        userTwoCards.removeAll()
+        warDeal(deck: deck)
+    }
+    }

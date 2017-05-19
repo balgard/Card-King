@@ -25,6 +25,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var selectedCard = Card()
     var game = ""
     var pickerData = [String]()
+    var playerOneHand = [String]()
     
     @IBAction func selectCardButton(_ sender: UIButton)
     {
@@ -40,7 +41,12 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
         }
     }
-    
+    func buttonAction(sender: UIButton!){
+        
+        print("Button Tapped")
+
+        
+    }
     func shuffle(deck: [AnyObject])
     {
         var tempDeck = [Card]()
@@ -177,8 +183,19 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             var selectCard = UIButton(type: .system)
             selectCard.frame = CGRect(x:125, y:383, width: 124, height: 30)
             selectCard.setTitle("Flip Card", for: .normal)
+            selectCard.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
             gameView.addSubview(selectCard)
             containerView.addSubview(gameView)
+            fillDeck(deck: standardDeck)
+            shuffle(deck: standardDeck)
+            
+            for card in gameView.userOneCards{
+                var temp = card.getDescription()
+                playerOneHand.append(temp)
+                
+            }
+            gameView.gameBegin(deck: standardDeck)
+            gameView.playCard(deck: standardDeck)
     }
         else if game == "Solitaire"
         {
