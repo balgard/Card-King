@@ -68,7 +68,15 @@ class GoFishView: UIView {
                 x += 1
             }
             if(count == 3)  {
-                temp.append(temp[k])
+                if hand == userOneCards
+                {
+                    userOnePairs.append(temp[k])
+                    
+                }
+                else
+                {
+                    userTwoPairs.append(temp[k])
+                }
                 temp.remove(at: c4Pos)
                 temp.remove(at: c3Pos)
                 temp.remove(at: c2Pos)
