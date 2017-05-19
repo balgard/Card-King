@@ -26,6 +26,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var game = ""
     var pickerData = [String]()
     var playerOneHand = [String]()
+    var tempSelect = ""
     
     @IBAction func selectCardButton(_ sender: UIButton)
     {
@@ -151,7 +152,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)  {
-        var tempSelect = pickerData[row]
+        tempSelect = pickerData[row]
         //have var = pickerData[row]
     }
 
