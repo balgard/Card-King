@@ -42,6 +42,7 @@ class GoFishView: UIView {
     
     //Change to check for pairs of four
     func checkForCompleted(hand: [Card])  {
+        organizeCardDeck()
         var temp = hand
         i = hand.count
         k = 0
@@ -71,7 +72,6 @@ class GoFishView: UIView {
                 if hand == userOneCards
                 {
                     userOnePairs.append(temp[k])
-                    
                 }
                 else
                 {
@@ -83,9 +83,11 @@ class GoFishView: UIView {
                 temp.remove(at: c1Pos)
                 i = temp.count
                 organizeCardDeck()
-            }   else    {
+            }
+            else    {
                 k += 1
             }
+            count = 0
         }
         if hand == userOneCards
         {
@@ -200,5 +202,6 @@ class GoFishView: UIView {
         userTwoCards.removeAll()
         userTwoPairs.removeAll()
         goFishDeal(deck: deck)
+        organizeCardDeck()
     }
 }
