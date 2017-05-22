@@ -35,8 +35,78 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         {
             if var gameView = x as? GoFishView
             {
-                print("TEST")
+                var checker = gameView.userOneCards
+                for m in gameView.userOneCards
+                {
+                    if m.getDescription() == tempSelect //finds card selected in player hand
+                    {
+                        for n in gameView.userTwoCards //finds card in cpu hand
+                        {
+                            if n.getDescription() == tempSelect
+                            {
+                                count += 1
+                            }
+                            
+                        }
+                        if count != 0 //checks if go fish is needed
+                        {
+                            gameView.checkDifferentHand(checked: gameView.userTwoCards, asker: gameView.userOneCards, card: m)
+                        }
+                        else
+                        {
+                            gameView.draw(drawer: gameView.userOneCards)
+                        }
+                        gameView.checkForCompleted(hand: gameView.userOneCards)
+                        gameView.dealMidGame(hand: gameView.userOneCards)
+                        if checker != gameView.userOneCards
+                        {
+                            pickerData.removeAll()
+                            for card in gameView.userOneCards
+                            {
+                                var temp = card.getDescription()
+                                pickerData.append(temp)
+                            }
+                        }
+                        cardsLeft.text = "Cards Left: \(gameView.drawCards.count)"
+                        playerScore.text = "\(gameView.userOnePairs.count) Pairs"
+                        //end of user turn
+                        
+                    }
+                }
+                //start of cpu turn
+                count = 0
+                var y = gameView.userOneCards
+                var cardSelected = gameView.userTwoCards[Int(arc4random_uniform(UInt32(gameView.userTwoCards.count)))] //randomly selects a card in cpu hand
+                for temp in gameView.userOneCards
+                {
+                    if temp == cardSelected
+                    {
+                        count += 1
+                    }
+                }
+                if count > 0
+                {
+                    gameView.checkDifferentHand(checked: gameView.userOneCards, asker: gameView.userTwoCards, card: cardSelected)
+                }
+                else
+                {
+                    gameView.draw(drawer: gameView.userTwoCards)
+                }
+                gameView.checkForCompleted(hand: gameView.userTwoCards)
+                gameView.dealMidGame(hand: gameView.userTwoCards)
+                cardsLeft.text = "Cards Left: \(gameView.drawCards.count)"
+                otherScore.text = "\(gameView.userTwoPairs.count) Pairs"
                 
+                if y != gameView.userOneCards
+                {
+                    pickerData.removeAll()
+                    for card in gameView.userOneCards
+                    {
+                        var temp = card.getDescription()
+                        pickerData.append(temp)
+                    }
+
+                }
             }
             else
             {
@@ -47,7 +117,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func buttonAction(sender: UIButton!){
         
         print("Button Tapped")
-}
+    }
     func shuffle(deck: [AnyObject])
     {
         var tempDeck = [Card]()
@@ -155,7 +225,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         tempSelect = pickerData[row]
         //have var = pickerData[row]
     }
-
+    
     
     /*  End of PickerView Stuff */
     
@@ -196,7 +266,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
             }
             gameView.gameBegin(deck: standardDeck)
-    }
+        }
         else if game == "Solitaire"
         {
             var gameView = SolitaireView(frame: CGRect(x: 0, y:67, width: 375, height: 600))
@@ -223,11 +293,11 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             containerView.addSubview(gameView)
             //gameView.removeConstraints(gameView.constraints)
             //gameView.addConstraints(temp)
-
+            
         }
     }
     
-
+    
     
     
     @IBAction func backPressed(_ sender: UIButton)
