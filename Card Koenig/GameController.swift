@@ -61,17 +61,18 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                         gameView.dealMidGame(hand: gameView.userOneCards)
                         if checker != gameView.userOneCards
                         {
-                            pickerData.removeAll()
+                            var temp = [String]()
                             for card in gameView.userOneCards
                             {
-                                var temp = card.getDescription()
-                                pickerData.append(temp)
+                                temp.append(card.getDescription())
                             }
+                            pickerView.reloadAllComponents()
+                            pickerData = temp
+                            pickerView.reloadAllComponents()
                         }
                         cardsLeft.text = "Cards Left: \(gameView.drawCards.count)"
                         playerScore.text = "\(gameView.userOnePairs.count) Pairs"
                         //end of user turn
-                        
                     }
                 }
                 //start of cpu turn
@@ -100,13 +101,14 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
                 if y != gameView.userOneCards
                 {
-                    pickerData.removeAll()
+                    var temp = [String]()
                     for card in gameView.userOneCards
                     {
-                        var temp = card.getDescription()
-                        pickerData.append(temp)
+                        temp.append(card.getDescription())
                     }
-
+                    pickerView.reloadAllComponents()
+                    pickerData = temp
+                    pickerView.reloadAllComponents()
                 }
             }
             else
