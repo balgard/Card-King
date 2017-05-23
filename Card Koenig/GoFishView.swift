@@ -70,10 +70,12 @@ class GoFishView: UIView {
                 {
                     userOnePairs.append(temp[i])
                     userOne = true
+                    pairFound = false
                 }
                 else
                 {
                     userTwoPairs.append(temp[i])
+                    pairFound = false
                 }
                 temp.remove(at: k)
                 temp.remove(at: i)
@@ -103,6 +105,8 @@ class GoFishView: UIView {
                 if(drawCards.count != 0)    {
                     temp.append(drawCards[0])
                     drawCards.remove(at: 0)
+                }   else    {
+                    break
                 }
             }
         }

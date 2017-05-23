@@ -122,7 +122,6 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print("Button Tapped")
     }
-    
     func shuffle(deck: [AnyObject])
     {
         var tempDeck = [Card]()
