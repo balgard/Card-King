@@ -43,7 +43,7 @@ class War: UIView {
             warEvent(uOne: userOneTemp, uTwo: userTwoTemp)
         }
     }
-    //This code below is the instance a tie occurs.
+    //This code below is the instance a tie occurs. Awaiting assistance with linking the button with these functions. Brent has my snapchat but I haven't gotten anything so I've just made our launchscreen and app icon. If you need anything from me, please don't hesitate to snapchat me. Godspeed boys. I'm on standby until told otherwise just so I don't break anything.
     func warEvent(uOne : Card, uTwo : Card) {
         var userOneTemp = userOneCards[0]
         userOneCards.remove(at: 1)
