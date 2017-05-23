@@ -44,52 +44,46 @@ class GoFishView: UIView {
     func checkForCompleted(hand: [Card])  {
         organizeCardDeck()
         var temp = hand
-        i = hand.count
-        k = 0
-        x = 0
-        count = 0
-        c1Pos = 0
-        c2Pos = 0
-        c3Pos = 0
-        c4Pos = 0
-        while(k < i)    {
-            x = k + 1
-            c1Pos = k
-            while(x < i)    {
-                if(count == 0 && hand[k].value == hand[x].value)  {
-                    c2Pos = x
-                    count += 1
-                }   else if(count == 1 && hand[k].value == hand[x].value)   {
-                    c3Pos = x
-                    count += 1
-                }   else if(count == 2 && hand[k].value == hand[x].value)   {
-                    c4Pos = x
-                    count += 1
-                }
-                x += 1
-            }
-            if(count == 3)  {
-                if hand == userOneCards
+        var i = 0
+        var k = 0
+        var userOne = false
+        var pairFound = false
+        while(i < temp.count)
+        {
+            pairFound = false
+            k = i + 1
+            while(k < temp.count)
+            {
+                if temp[i].value == temp[k].value
                 {
-                    userOnePairs.append(temp[k])
+                    pairFound = true
+                    break
                 }
                 else
                 {
-                    userTwoPairs.append(temp[k])
+                    k += 1
                 }
-                temp.remove(at: c4Pos)
-                temp.remove(at: c3Pos)
-                temp.remove(at: c2Pos)
-                temp.remove(at: c1Pos)
-                i = temp.count
-                organizeCardDeck()
             }
-            else    {
-                k += 1
+            if pairFound == true
+            {
+                if hand == userOneCards
+                {
+                    userOnePairs.append(temp[i])
+                    userOne = true
+                }
+                else
+                {
+                    userTwoPairs.append(temp[i])
+                }
+                temp.remove(at: k)
+                temp.remove(at: i)
             }
-            count = 0
+            else
+            {
+                i += 1
+            }
         }
-        if hand == userOneCards
+        if userOne == true
         {
             userOneCards = temp
         }
@@ -160,6 +154,9 @@ class GoFishView: UIView {
             userTwoCards = temp
             userOneCards = m
         }
+        organizeCardDeck()
+        checkForCompleted(hand: asker)
+        organizeCardDeck()
     }
     
     func goFishDeal(deck: [Card])
@@ -202,6 +199,9 @@ class GoFishView: UIView {
         userTwoCards.removeAll()
         userTwoPairs.removeAll()
         goFishDeal(deck: deck)
+        organizeCardDeck()
+        checkForCompleted(hand: userOneCards)
+        checkForCompleted(hand: userTwoCards)
         organizeCardDeck()
     }
 }

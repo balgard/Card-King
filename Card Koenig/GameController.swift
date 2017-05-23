@@ -59,17 +59,13 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                         }
                         gameView.checkForCompleted(hand: gameView.userOneCards)
                         gameView.dealMidGame(hand: gameView.userOneCards)
-                        if checker != gameView.userOneCards
-                        {
-                            var temp = [String]()
+                        var temp = [String]()
                             for card in gameView.userOneCards
                             {
                                 temp.append(card.getDescription())
                             }
-                            pickerView.reloadAllComponents()
                             pickerData = temp
                             pickerView.reloadAllComponents()
-                        }
                         cardsLeft.text = "Cards Left: \(gameView.drawCards.count)"
                         playerScore.text = "\(gameView.userOnePairs.count) Pairs"
                         //end of user turn
@@ -283,6 +279,10 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             fillDeck(deck: standardDeck)
             shuffle(deck: standardDeck)
             gameView.gameStart(deck:standardDeck)
+            playerScore.text = "\(gameView.userOnePairs.count) Pairs"
+            otherScore.text = "\(gameView.userTwoPairs.count) Pairs"
+            cardsLeft.text = "\(gameView.drawCards.count) Cards Left"
+            
             for card in gameView.userOneCards
             {
                 var temp = card.getDescription()
