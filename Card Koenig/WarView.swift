@@ -77,7 +77,6 @@ class War: UIView {
             temp.remove(at: 0)
             userTwoCards.append(temp[0])
             temp.remove(at: 0)
-            print("\(userOneCards.count)")
         }
         drawCards = temp
     }
@@ -90,12 +89,10 @@ class War: UIView {
         }
         if drawer == userOneCards{
             userOneCards = temp
-            print("User 1")
         }
         else
         {
             userTwoCards = temp
-            print("User 2")
         }
     }
     func gameBegin(deck: [Card]){

@@ -59,7 +59,6 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                         else
                         {
                             gameView.draw(drawer: gameView.userOneCards)
-                            print("Drawn")
                         }
                         gameView.checkForCompleted(hand: gameView.userOneCards)
                         gameView.dealMidGame(hand: gameView.userOneCards)
@@ -90,15 +89,14 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 {
                     gameView.checkDifferentHand(checked: gameView.userOneCards, asker: gameView.userTwoCards, card: cardSelected)
                     count = 0
-                    print("Checking For Change")
                 }
                 else
                 {
                     gameView.draw(drawer: gameView.userTwoCards)
-                    print("CPU DRAW")
                 }
                 gameView.checkForCompleted(hand: gameView.userTwoCards)
                 gameView.dealMidGame(hand: gameView.userTwoCards)
+                gameView.dealMidGame(hand: gameView.userOneCards)
                 cardsLeft.text = "Cards Left: \(gameView.drawCards.count)"
                 otherScore.text = "\(gameView.userTwoPairs.count) Pairs"
                 
@@ -124,6 +122,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         print("Button Tapped")
     }
+    
     func shuffle(deck: [AnyObject])
     {
         var tempDeck = [Card]()
