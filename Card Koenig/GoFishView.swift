@@ -97,9 +97,12 @@ class GoFishView: UIView {
     
     func dealMidGame(hand: [Card])   {
         var temp = hand
-        if(hand.count == 0) {
-            while(hand.count < 7)   {
+        if temp.count <= 1
+        {
+            print("Dealing")
+            while(temp.count < 7)   {
                 if(drawCards.count != 0)    {
+                    print(temp.count)
                     temp.append(drawCards[0])
                     drawCards.remove(at: 0)
                 }
@@ -117,10 +120,11 @@ class GoFishView: UIView {
     func draw(drawer:[Card])
     {
         var temp = drawer
-        if drawCards.count > 0
+        if drawCards.count >= 0
         {
             temp.append(drawCards[0])
             drawCards.remove(at: 0)
+            print(temp.last?.getDescription())
         }
         if drawer == userOneCards
         {

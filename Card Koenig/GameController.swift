@@ -34,8 +34,10 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         var count = 0
         for x in containerView.subviews
         {
+            count = 0
             if var gameView = x as? GoFishView
             {
+                count = 0
                 var checker = gameView.userOneCards
                 for m in gameView.userOneCards
                 {
@@ -49,23 +51,25 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                             }
                             
                         }
-                        if count != 0 //checks if go fish is needed
+                        if count > 0 //checks if go fish is needed
                         {
                             gameView.checkDifferentHand(checked: gameView.userTwoCards, asker: gameView.userOneCards, card: m)
+                            count = 0
                         }
                         else
                         {
                             gameView.draw(drawer: gameView.userOneCards)
+                            print("Drawn")
                         }
                         gameView.checkForCompleted(hand: gameView.userOneCards)
                         gameView.dealMidGame(hand: gameView.userOneCards)
                         var temp = [String]()
-                            for card in gameView.userOneCards
-                            {
-                                temp.append(card.getDescription())
-                            }
-                            pickerData = temp
-                            pickerView.reloadAllComponents()
+                        for card in gameView.userOneCards
+                        {
+                            temp.append(card.getDescription())
+                        }
+                        pickerData = temp
+                        pickerView.reloadAllComponents()
                         cardsLeft.text = "Cards Left: \(gameView.drawCards.count)"
                         playerScore.text = "\(gameView.userOnePairs.count) Pairs"
                         //end of user turn
@@ -85,10 +89,13 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 if count > 0
                 {
                     gameView.checkDifferentHand(checked: gameView.userOneCards, asker: gameView.userTwoCards, card: cardSelected)
+                    count = 0
+                    print("Checking For Change")
                 }
                 else
                 {
                     gameView.draw(drawer: gameView.userTwoCards)
+                    print("CPU DRAW")
                 }
                 gameView.checkForCompleted(hand: gameView.userTwoCards)
                 gameView.dealMidGame(hand: gameView.userTwoCards)
@@ -102,7 +109,6 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     {
                         temp.append(card.getDescription())
                     }
-                    pickerView.reloadAllComponents()
                     pickerData = temp
                     pickerView.reloadAllComponents()
                 }
