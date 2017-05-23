@@ -113,12 +113,10 @@ class GoFishView: UIView {
         if hand == userOneCards
         {
             userOneCards = temp
-            checkForCompleted(hand: userOneCards)
         }
         else
         {
             userTwoCards = temp
-            checkForCompleted(hand: userTwoCards)
         }
     }
     func draw(drawer:[Card])
@@ -132,12 +130,10 @@ class GoFishView: UIView {
         if drawer == userOneCards
         {
             userOneCards = temp
-            checkForCompleted(hand: userOneCards)
         }
         else
         {
             userTwoCards = temp
-            checkForCompleted(hand: userTwoCards)
         }
     }
     
@@ -164,7 +160,6 @@ class GoFishView: UIView {
             userOneCards = m
         }
         organizeCardDeck()
-        checkForCompleted(hand: asker)
         organizeCardDeck()
     }
     

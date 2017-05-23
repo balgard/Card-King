@@ -77,7 +77,7 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 //start of cpu turn
                 count = 0
                 var y = gameView.userOneCards
-                var cardSelected = gameView.userTwoCards[Int(arc4random_uniform(UInt32(gameView.userTwoCards.count - 1)))] //randomly selects a card in cpu hand
+                var cardSelected = gameView.userTwoCards[Int(arc4random_uniform(UInt32(gameView.userTwoCards.count)))]//randomly selects a card in cpu hand
                 for temp in gameView.userOneCards
                 {
                     if temp == cardSelected
@@ -110,13 +110,13 @@ class GameController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                     pickerData = temp
                     pickerView.reloadAllComponents()
                 }
+                else
+                {
+                    
+                }
             }
-            else
-            {
-                
-            }
+            pickerView.isUserInteractionEnabled = true
         }
-        pickerView.isUserInteractionEnabled = true
     }
     func buttonAction(sender: UIButton!){
         
